@@ -1,0 +1,35 @@
+.header{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.header .logo img{
+  height:48px;
+}
+
+.header .navbar a{
+  margin: 0 1.5rem;
+  font-size: 23px;
+  color: #fff;
+}
+.header .navbar a:hover{
+  color: var(--main-color);
+  border-bottom: var(--border-main);
+  padding: .5rem;
+}
+.header .icons div{
+  cursor: pointer;
+  font-size: 30px;
+  margin-left: 25px;
+}
+.header .icons div:hover{
+  color: var(--main-color);
+}
