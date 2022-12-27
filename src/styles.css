@@ -5,6 +5,7 @@
   --main-color: #ff8c00;
   --black: #000;
   --bg: #000;
+  --white: #ffffff;
   --border: 1px solid rgba(255, 255, 255, 0.3);
   --border-main: 1px solid var(--main-color);
 }
@@ -23,3 +24,39 @@ body{
   background: var(--bg);
 }
 
+html{
+  scroll-padding-top: 8rem;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 63%;
+}
+
+html::-webkit-scrollbar{
+  width: .7rem;
+}
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+  background: var(--main-color);
+  border-radius:7rem;
+}
+
+section{
+  padding: 1.5rem 7%;
+}
+
+.btn{
+  margin-top:2rem;
+  display: inline-block;
+  color: var(--white);
+  background: var(--main-color);
+  cursor: pointer;
+  padding: .8rem 3rem;
+  font-size: 1.8rem;
+}
+.btn:hover{
+  background: var(--white);
+  color: var(--main-color);
+  letter-spacing: .1rem;
+}

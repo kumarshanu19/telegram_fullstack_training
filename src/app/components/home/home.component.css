@@ -1,0 +1,30 @@
+.home{
+  min-height:100vh;
+  display: flex;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1606462531559-67f087826c4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.home .content{
+  max-width: 60rem;
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.home .content p {
+  font-size: 2rem;
+  font-weight: lighter;
+  color: var(--white);
+  line-height: 1.5;
+  padding: 1.5rem 0;
+}
+
+
+.home .content p span {
+  color: var(--main-color);
+}
