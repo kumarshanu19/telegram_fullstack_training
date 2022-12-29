@@ -10,7 +10,7 @@
   max-width: 60rem;
 }
 
-.home .content h3 {
+.home .content h1 {
   font-size: 6rem;
   color: var(--white);
   text-transform: uppercase;
@@ -27,4 +27,77 @@
 
 .home .content p span {
   color: var(--main-color);
+}
+
+
+/* About Us */
+.about .row{
+  display:flex;
+  align-items: center;
+  background: rgb(26, 26, 26);
+ flex-wrap: wrap;
+}
+.about .row .image{
+  flex: 1 1 40rem;
+}
+.about .row .image img{
+  width: 100%;
+}
+.about .row .content{
+  flex: 1 1 40rem;
+  padding: 20px;
+}
+.about .row .content h3{
+  font-size:3rem;
+  color: var(--white);
+}
+.about .row .content p{
+  font-size:1.6rem;
+  color: var(--white);
+  padding: 1rem 0;
+  line-height:1.7;
+}
+
+
+/* Menu */
+
+.menu .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.menu .box-container .box{
+  padding: 5rem;
+  text-align: center;
+  border: var(--border)
+}
+
+.menu .box-container .box img{
+  height:10rem;
+  width:10rem;
+  border: none;
+  border-radius:50%;
+}
+
+.menu .box-container .box h3{
+  color: var(--white);
+  font-size:2rem;
+  padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+  color: var(--white);
+  font-size: 2.5rem;
+  padding: .5rem 0;
+}
+.menu .box-container .box .price span{
+  font-size: 2rem;
+  text-decoration: line-through;
+  font-weight: 300;
+}
+.menu .box-container .box:hover{
+  background: var(--white);
+}
+.menu .box-container .box:hover > *{
+  color: var(--bg)
 }

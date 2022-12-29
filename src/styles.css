@@ -60,3 +60,15 @@ section{
   color: var(--main-color);
   letter-spacing: .1rem;
 }
+/* Heading Start */
+.heading{
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 3rem 0 3.5rem 0 ;
+  font-size:4rem;
+}
+.heading span{
+  color: var(--main-color);
+  text-transform: uppercase;
+}

@@ -1,11 +1,47 @@
 <section class="home" id="home">
   <div class="content">
-    <h3>
+    <h1>
       Fresh coffee in the morning
-    </h3>
+    </h1>
     <p><span class="txt-clr">
-      Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Placeat
-      Labore, Sint Cupiditate</span> Distinctio Tempora Reiciendis.</p>
-      <a href="#" class="btn">Get Yours Now</a>
+        Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Placeat
+        Labore, Sint Cupiditate</span> Distinctio Tempora Reiciendis.</p>
+    <a href="#" class="btn">Get Yours Now</a>
+  </div>
+</section>
+<section class="about" id="about">
+  <h2 class="heading"> <span>about</span> us</h2>
+  <div class="row">
+    <div class="image">
+      <img
+        src="https://images.unsplash.com/photo-1426174840074-541ae41efdb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80"
+        alt="About Us Coffee">
+    </div>
+    <div class="content">
+      <h3>Who Makes Our Coffee Special?</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+        no sea takimata sanctus .
+      </p>
+      <p>
+        Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. Odit Amet Enim Quod
+        Veritatis, Nihil Voluptas Culpa! Neque Consectetur Obcaecati Sapiente?
+      </p>
+      <a href="" class="btn">Learn more</a>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <h2 class="header">OUR <span>Menu</span></h2>
+  <div class="box-container">
+    <div class="box" *ngFor="let item of menu">
+      <img [src]="item.img" [alt]="item.title">
+      <h3>{{item.title}}</h3>
+      <div class="price">₹ {{item.discount}} <span>{{item.price}}</span></div>
+      <a href="" class="btn">Add to cart</a>
+    </div>
   </div>
 </section>
