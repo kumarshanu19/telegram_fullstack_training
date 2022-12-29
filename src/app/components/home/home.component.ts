@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
 
   submit(frm: any) {
     console.log(frm.value);
-
+//Api connection to submit form
   }
 
 }
