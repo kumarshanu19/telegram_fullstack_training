@@ -4,16 +4,18 @@ import { CommonModule } from '@angular/common';
 import { ComponentsRoutingModule } from './components-routing.module';
 import { LayoutComponent } from './layout.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     CommonModule,
-    ComponentsRoutingModule
+    ComponentsRoutingModule,
+    FormsModule,
   ]
 })
 export class ComponentsModule { }

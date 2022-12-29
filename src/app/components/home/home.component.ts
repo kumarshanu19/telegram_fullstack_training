@@ -6,6 +6,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  formInput: Array<any> = [
+    {
+      type: "text",
+      label: "name",
+      icon: 'user',
+      minLength: 5,
+      maxLength: 20,
+    },
+    {
+      type: "email",
+      label: "email",
+      minLength: 5,
+      icon: 'envelope',
+      maxLength: 25,
+      required: true,
+    },
+    {
+      type: "number",
+      label: "number",
+      minLength: 10,
+      icon: 'phone',
+      maxLength: 10,
+      required: true,
+    },
+  ];
+
   menu: Array<any> = [
     {
       _id: 1,
@@ -53,6 +80,11 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  submit(frm: any) {
+    console.log(frm.value);
+
   }
 
 }
