@@ -77,14 +77,23 @@ export class HomeComponent implements OnInit {
       discount: 15
     },
   ];
+  product = [
+    { name: "Apple", qty: 5 },
+    { name: "Mango", qty: 1 },
+    { name: "Orange", qty: 7 },
+    { name: "Papaya", qty: 3 },
+    { name: "Greps", qty: 9 },
+  ];
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.product);
   }
 
   submit(frm: any) {
+
     console.log(frm.value);
-//Api connection to submit form
   }
+
 
 }

@@ -146,3 +146,45 @@
 input{
   border: none;
 }
+.footer{
+  background: rgb(26, 26, 26);
+  text-align: center;
+}
+.footer .share{
+  padding: 1rem 0;
+}
+.footer .share a{
+  color: var(--white);
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  border: var(--border);
+  margin: 1rem;
+  border-radius:50%;
+  background-color: var(--bg);
+}
+
+.footer .share a:hover , .footer .links a:hover{
+  background-color: var(--main-color);
+}
+.footer .links{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+.footer .links a{
+  padding:.8rem 2rem;
+  color: var(--white);
+  border: var(--border);
+  font-size: 2rem;
+}
+
+.footer .credit{
+  font-size: 2rem;
+  color: var(--white);
+  padding:2rem;
+ font-weight: 300;
+}

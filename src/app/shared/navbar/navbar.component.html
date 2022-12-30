@@ -2,7 +2,7 @@
   <a href="javascript:0;" class="logo">
     <img src="https://i.pinimg.com/736x/be/cb/2c/becb2c74f916609713e1553d7a7a355e.jpg" alt="logo">
   </a>
-  <nav class="navbar">
+  <nav class="navbar {{navToggle? 'active': ''}}">
     <a href="">Home</a>
     <a href="">About</a>
     <a href="">Menu</a>
@@ -11,5 +11,9 @@
   <div class="icons">
     <div class="fas fa-search" id="search-bar"></div>
     <div class="fas fa-shopping-cart" id="cart-btn"></div>
+  <div class="fas fa-bars" id="menu-btn" (click)="toggle()"></div>
   </div>
+
+  <!-- Cart Card-->
+
 </header>

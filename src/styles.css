@@ -72,3 +72,27 @@ section{
   color: var(--main-color);
   text-transform: uppercase;
 }
+
+@media (max-width: 768px){
+  #menu-btn{
+    display: inline-block !important;
+  }
+  .header .navbar{
+    position: absolute !important;
+    top: 100%;
+    right: -100%;
+    background: var(--white);
+    width: 30rem;
+    height: calc(100vh - 15rem);
+  }
+  .header .navbar.active{
+    right: 0;
+  }
+  .header .navbar a{
+    color: var(--bg) !important;
+    display: block;
+    margin: 2rem 0;
+    padding: 2rem;
+    font-size:2rem
+  }
+}
