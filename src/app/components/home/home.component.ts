@@ -78,18 +78,67 @@ export class HomeComponent implements OnInit {
     },
   ];
   product = [
-    { name: "Apple", qty: 5 },
-    { name: "Mango", qty: 1 },
-    { name: "Orange", qty: 7 },
-    { name: "Papaya", qty: 3 },
     { name: "Greps", qty: 9 },
+    { name: "XYZ", qty: 5 },
+    { name: "Mango", qty: 1 },
+    { name: "Papaya", qty: 3 },
+    { name: "Apple", qty: 5 },
+    { name: "Orange", qty: 7 },
   ];
-  constructor() { }
-
-  ngOnInit(): void {
-    console.log(this.product);
+  constructor() {
+    console.log('Before sorting',this.product)
   }
 
+  ngOnInit(): void {
+
+    console.log('After shorting',this.sorting(this.product))
+  }
+
+  sorting(array: any) {
+    var yes = false;
+    while (!yes) {
+      yes = true;
+      for (let i = 1; i < array.length; i += 1) {
+        if (array[i - 1].qty > array[i].qty) {
+          yes = false;
+          var temp = array[i - 1].qty;
+          array[i - 1].qty = array[i].qty;
+          array[i].qty = temp;
+        }
+      }
+    }
+    return array;
+  }
+
+  sorting2(array: any) {
+    return array.reduce((acc:any, val:any) => {
+      let i = 0;
+      while (i < array.length && val.qty > array[i].qty) {
+        i++
+      }
+      acc.splice(i, 0, val.qty);
+      return acc
+    }, [])
+  }
+
+  bubbleShort(arr: any) {
+    for (let i = 0; i < arr.length -1; i++) {
+      let swapped = false;
+      for (let j = 0; j < arr.length - i; j++) {
+      //Swapping Element
+        if (arr[j]?.qty > arr[j + 1]?.qty) {
+          let dtm = arr[j].qty;
+          arr[j].qty = arr[j + 1].qty
+          arr[j + 1].qty = dtm;
+          swapped =true
+        }
+
+      }
+      // no element
+      if (!swapped) break;
+    }
+    return arr;
+  }
   submit(frm: any) {
 
     console.log(frm.value);

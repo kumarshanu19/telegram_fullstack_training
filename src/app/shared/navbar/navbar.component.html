@@ -10,10 +10,21 @@
   </nav>
   <div class="icons">
     <div class="fas fa-search" id="search-bar"></div>
-    <div class="fas fa-shopping-cart" id="cart-btn"></div>
-  <div class="fas fa-bars" id="menu-btn" (click)="toggle()"></div>
+    <div class="fas fa-shopping-cart" id="cart-btn" (click)="cartToggling()"></div>
+    <div class="fas fa-bars" id="menu-btn" (click)="toggle()"></div>
   </div>
-
   <!-- Cart Card-->
+  <div class="cart-item-container {{cartToggle? 'active': ''}}">
+    <div class="cart-item" *ngFor="let item of menu">
+      <span class="fas fa-times"></span>
+      <img [src]="item.img" alt="{{item.title}}">
+      <div class="content">
+        <h3>{{item.title}}</h3>
+        <div class="price">₹ {{item.price}}/-</div>
+      </div>
+    </div>
+
+    <a href="javascript:void(0)" class="btn"> Checkout now</a>
+  </div>
 
 </header>
